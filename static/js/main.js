@@ -351,10 +351,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
+                // 編集した行の単語と意味のセルを取得
                 const row = target.closest('tr');
                 const wordCell = row.cells[0];
                 const meaningCell = row.cells[1];
 
+                // 編集前の単語と意味をdatasetから取得
                 let originalWord = wordCell.dataset.originalWord; 
                 let originalMeaning = meaningCell.dataset.originalMeaning;
 
